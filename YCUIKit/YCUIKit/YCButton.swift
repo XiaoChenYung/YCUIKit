@@ -30,6 +30,15 @@ class YCButton: UIButton {
         }
     }
     
+    /**
+     初始化
+     
+     - parameter frame:       <#frame description#>
+     - parameter isAnimation: <#isAnimation description#>
+     
+     - returns: <#return value description#>
+     */
+    
     init(frame: CGRect,isAnimation: Bool) {
         super.init(frame: frame)
         self.isAnimation = isAnimation
