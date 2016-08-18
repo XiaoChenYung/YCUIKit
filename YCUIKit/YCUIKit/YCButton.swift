@@ -44,10 +44,14 @@ class YCButton: UIButton {
         self.isAnimation = isAnimation
     }
     
-    override func addTarget(target: AnyObject?, action: Selector, forControlEvents controlEvents: UIControlEvents) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if isAnimation {
             addKeyAnimation()
         }
+    }
+    
+    override func addTarget(target: AnyObject?, action: Selector, forControlEvents controlEvents: UIControlEvents) {
+
         super.addTarget(target, action: action, forControlEvents: controlEvents)
     }
     
@@ -58,7 +62,9 @@ class YCButton: UIButton {
     func addKeyAnimation() {
         let layerAn = CAKeyframeAnimation(keyPath: "transform.scale")
         layerAn.values = [1,0.9,0.8,0.9,1,1.1,1.2,1.1,1]
-        layerAn.duration = 5
+        layerAn.duration = 0.5
+        layerAn.repeatCount = 1
+        layerAn.removedOnCompletion = true
         layer.addAnimation(layerAn, forKey: nil)
     }
 
