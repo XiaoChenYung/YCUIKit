@@ -15,6 +15,8 @@
 		9235AB441D6558C500D33EE1 /* YCUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9235AB431D6558C500D33EE1 /* YCUIKitTests.swift */; };
 		9235AB4F1D6558C500D33EE1 /* YCUIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9235AB4E1D6558C500D33EE1 /* YCUIKitUITests.swift */; };
 		9235AB5E1D65597800D33EE1 /* YCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9235AB5D1D65597800D33EE1 /* YCButton.swift */; };
+		92E39F831D659EF0007C5369 /* XCScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E39F821D659EF0007C5369 /* XCScrollView.swift */; };
+		92E39F851D65A1F9007C5369 /* XCScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E39F841D65A1F9007C5369 /* XCScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		9235AB4E1D6558C500D33EE1 /* YCUIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCUIKitUITests.swift; sourceTree = "<group>"; };
 		9235AB501D6558C500D33EE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9235AB5D1D65597800D33EE1 /* YCButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YCButton.swift; sourceTree = "<group>"; };
+		92E39F821D659EF0007C5369 /* XCScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCScrollView.swift; sourceTree = "<group>"; };
+		92E39F841D65A1F9007C5369 /* XCScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +135,9 @@
 		9235AB5C1D65595700D33EE1 /* YCUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				92E39F841D65A1F9007C5369 /* XCScreen.swift */,
 				9235AB5D1D65597800D33EE1 /* YCButton.swift */,
+				92E39F821D659EF0007C5369 /* XCScrollView.swift */,
 			);
 			path = YCUIKit;
 			sourceTree = "<group>";
@@ -268,7 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9235AB5E1D65597800D33EE1 /* YCButton.swift in Sources */,
+				92E39F851D65A1F9007C5369 /* XCScreen.swift in Sources */,
 				9235AB311D6558C500D33EE1 /* ViewController.swift in Sources */,
+				92E39F831D659EF0007C5369 /* XCScrollView.swift in Sources */,
 				9235AB2F1D6558C500D33EE1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

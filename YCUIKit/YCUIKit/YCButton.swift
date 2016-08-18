@@ -10,26 +10,6 @@ import UIKit
 
 class YCButton: UIButton {
     
-    @IBInspectable var cornerRadius: CGFloat = 0 {
-        didSet {
-            layer.cornerRadius = cornerRadius
-            layer.masksToBounds = cornerRadius > 0
-        }
-    }
-    
-    @IBInspectable var isAnimation: Bool = false
-    
-    @IBInspectable var borderWidth: CGFloat = 0 {
-        didSet {
-            layer.borderWidth = borderWidth
-        }
-    }
-    @IBInspectable var borderColor: UIColor? {
-        didSet {
-            layer.borderColor = borderColor?.CGColor
-        }
-    }
-    
     /**
      初始化
      
@@ -66,6 +46,26 @@ class YCButton: UIButton {
         layerAn.repeatCount = 1
         layerAn.removedOnCompletion = true
         layer.addAnimation(layerAn, forKey: nil)
+    }
+    //MARK: 变量
+    @IBInspectable var cornerRadius: CGFloat = 0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+            layer.masksToBounds = cornerRadius > 0
+        }
+    }
+    
+    @IBInspectable var isAnimation: Bool = false
+    
+    @IBInspectable var borderWidth: CGFloat = 0 {
+        didSet {
+            layer.borderWidth = borderWidth
+        }
+    }
+    @IBInspectable var borderColor: UIColor? {
+        didSet {
+            layer.borderColor = borderColor?.CGColor
+        }
     }
 
 }
