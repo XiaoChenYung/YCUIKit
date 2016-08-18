@@ -16,6 +16,9 @@ class YCButton: UIButton {
             layer.masksToBounds = cornerRadius > 0
         }
     }
+    
+    @IBInspectable var isAnimation: Bool = false
+    
     @IBInspectable var borderWidth: CGFloat = 0 {
         didSet {
             layer.borderWidth = borderWidth
@@ -29,9 +32,14 @@ class YCButton: UIButton {
     
     init(frame: CGRect,isAnimation: Bool) {
         super.init(frame: frame)
+        self.isAnimation = isAnimation
+    }
+    
+    override func addTarget(target: AnyObject?, action: Selector, forControlEvents controlEvents: UIControlEvents) {
         if isAnimation {
             addKeyAnimation()
         }
+        super.addTarget(target, action: action, forControlEvents: controlEvents)
     }
     
     required init?(coder aDecoder: NSCoder) {
