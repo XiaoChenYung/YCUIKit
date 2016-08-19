@@ -32,7 +32,7 @@ class XCScrollView: UIScrollView,UIScrollViewDelegate {
     }
     
     private func resizeScrollView(max_map_ratio max_ratio: Int) {
-        
+    
         let size = imageView.image?.size
         
         minimumZoomScale = XCScreen.height() / (size?.height)!
