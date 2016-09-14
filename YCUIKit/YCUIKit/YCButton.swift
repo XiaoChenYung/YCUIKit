@@ -10,30 +10,21 @@ import UIKit
 
 class YCButton: UIButton {
     
-    /**
-     初始化
-     
-     - parameter frame:       <#frame description#>
-     - parameter isAnimation: <#isAnimation description#>
-     
-     - returns: <#return value description#>
-     */
-    
     init(frame: CGRect,isAnimation: Bool) {
         super.init(frame: frame)
         self.isAnimation = isAnimation
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if isAnimation {
             addKeyAnimation()
         }
     }
     
-    override func addTarget(target: AnyObject?, action: Selector, forControlEvents controlEvents: UIControlEvents) {
-
-        super.addTarget(target, action: action, forControlEvents: controlEvents)
-    }
+//    override func addTarget(target: AnyObject?, action: Selector, forControlEvents controlEvents: UIControlEvents) {
+//
+//        super.addTarget(target, action: action, forControlEvents: controlEvents)
+//    }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -44,8 +35,8 @@ class YCButton: UIButton {
         layerAn.values = [1,0.9,0.8,0.9,1,1.1,1.2,1.1,1]
         layerAn.duration = 0.5
         layerAn.repeatCount = 1
-        layerAn.removedOnCompletion = true
-        layer.addAnimation(layerAn, forKey: nil)
+        layerAn.isRemovedOnCompletion = true
+        layer.add(layerAn, forKey: nil)
     }
     //MARK: 变量
     @IBInspectable var cornerRadius: CGFloat = 0 {
@@ -64,7 +55,7 @@ class YCButton: UIButton {
     }
     @IBInspectable var borderColor: UIColor? {
         didSet {
-            layer.borderColor = borderColor?.CGColor
+            layer.borderColor = borderColor?.cgColor
         }
     }
 

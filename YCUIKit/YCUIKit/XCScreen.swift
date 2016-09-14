@@ -10,10 +10,10 @@ import UIKit
 
 class XCScreen: NSObject {
     class func height() -> CGFloat {
-        return UIScreen.mainScreen().bounds.size.height
+        return UIScreen.main.bounds.size.height
     }
     
     class func width() -> CGFloat {
-        return UIScreen.mainScreen().bounds.size.width
+        return UIScreen.main.bounds.size.width
     }
 }

@@ -45,7 +45,8 @@ class XCScrollView: UIScrollView,UIScrollViewDelegate {
             zoomScale = minimumZoomScale
         }
         
-        imageView.frame = CGRectMake(0, 0, imageView.image!.size.width * zoomScale, imageView.image!.size.height * zoomScale)
+//        imageView.frame = CGRectMake(0, 0, imageView.image!.size.width * zoomScale, imageView.image!.size.height * zoomScale)
+        imageView.frame = CGRect(x: 0, y: 0, width: (imageView.image?.size.width)! * zoomScale, height: (imageView.image?.size.height)! * zoomScale)
         
         contentSize = imageView.frame.size
         
@@ -54,7 +55,7 @@ class XCScrollView: UIScrollView,UIScrollViewDelegate {
     
     //MARK: 图片缩放代理
     
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+    private func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return imageView
     }
 
